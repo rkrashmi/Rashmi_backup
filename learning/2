@@ -1,0 +1,71 @@
+//print first 10 lines
+
+#include <stdio.h>
+int main(int argc , char * argv[])
+{
+	FILE *fp;
+	int c;
+	int count = 0;
+	int size;
+	int cnt = 0;
+
+	fp = fopen(* ++argv, "r");
+#if 0
+	while( (c = getc(fp)) != EOF ){
+		if( c == '\n'){
+			count++;
+			}
+	
+		putc( c , stdout);
+
+		if( count == 10)
+			break;
+	}
+	return 0;
+}
+#endif
+
+//	fseek(fp , 0, SEEK_SET);
+//	size = ftell(fp);
+/*	fseek(fp , -1000, SEEK_END);
+	size = ftell(fp);	
+	printf("size = %d",size);
+	while( (c = getc(fp)) != EOF){
+		putc( c , stdout);
+
+	}
+	return 0;
+}
+*/	
+
+	while( (c = getc(fp)) != EOF ){
+		if( c == '\n'){
+			count++;
+			}
+	}
+	
+	count = count - 10;
+
+	rewind(fp);
+	
+	 while((c = getc(fp)) != EOF) {
+		if( c == '\n')
+		{
+			cnt++;
+			
+			if(cnt == count)
+			{
+				break;			
+//				putc(c, stdout);
+			}
+		}
+	}
+	
+	while((c = getc(fp)) != EOF)
+	{
+		putc(c, stdout);
+	}
+
+	return 0;
+
+}
