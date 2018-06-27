@@ -1,0 +1,1 @@
+cmd_/home/rashmi/my_file/os_module/sudo_driver/kmod.ko := ld -r -m elf_i386 -T ../scripts/module-common.lds --build-id  -o /home/rashmi/my_file/os_module/sudo_driver/kmod.ko /home/rashmi/my_file/os_module/sudo_driver/kmod.o /home/rashmi/my_file/os_module/sudo_driver/kmod.mod.o ;  true

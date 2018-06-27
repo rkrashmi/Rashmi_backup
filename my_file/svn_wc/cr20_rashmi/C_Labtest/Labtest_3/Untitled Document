@@ -1,0 +1,2 @@
+6. Write a program my_grep.c which searches the named input files for the lines containing a match to the given pattern.
+Eg: ./my_grep file.txt pattern

@@ -1,0 +1,20 @@
+Commands for linker script and to change address of text and data.
+
+Enter in sudo mode.
+
+Your linker script is located at /usr/bin/ vim ld
+
+1. /8048000        // for readable format.
+
+2. :%s/current address/new address/g    // find and replace.
+                eg. :%s/8048000/8051000
+
+        NOTE :- New address should be of page size.
+
+
+3. :w !sudo tee %        // to update changes n build
+
+4. :wq!            // to save and exit
+
+5. Compile the file.        ld -r ls.
+

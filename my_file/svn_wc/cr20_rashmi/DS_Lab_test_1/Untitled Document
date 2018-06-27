@@ -1,0 +1,2 @@
+6. Write a program to create Binary search tree and write a function sum_of_elements() which returns total sum of all the elements present in the tree.
+7. Extend the above program to find the least element in the above constructed tree, using minimal number of hops. 
